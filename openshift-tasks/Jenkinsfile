@@ -27,29 +27,8 @@ podTemplate(
     }
 
     // Build the Tasks Service
-    dir('openshift-tasks') {
-      // The following variables need to be defined at the top level
-      // and not inside the scope of a stage - otherwise they would not
-      // be accessible from other stages.
-      // Extract version from the pom.xml
-      def version = getVersionFromPom("pom.xml")
-
-      // TBD Set the tag for the development image: version + build number
-      def devTag  = "${version}-" + currentBuild.number
-      // Set the tag for the production image: version
-      def prodTag = "${version}"
-
-      // Using Maven build the war file
-      // Do not run tests in this step
-      stage('Build war') {
-        echo "Building version ${devTag}"
-
-        // TBD: Execute Maven Build
-       sh "${mvnCmd} clean package -DskipTests=true"
-      }
-    }
   }
-}
+}    
 
 // Convenience Functions to read version from the pom.xml
 // Do not change anything below this line.
