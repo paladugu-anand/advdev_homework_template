@@ -40,7 +40,8 @@ items:
     source:
       type: "Git"
       git:
-        uri: "https://github.com/paladugu-anand/advdev_homework_template/tree/master/openshift-tasks"
+        uri: "https://github.com/paladugu-anand/advdev_homework_template.git"
+      contextDir: "openshift-tasks"
     strategy:
       type: "JenkinsPipeline"
       jenkinsPipelineStrategy:
