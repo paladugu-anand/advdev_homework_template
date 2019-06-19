@@ -40,12 +40,11 @@ items:
     source:
       type: "Git"
       git:
-        uri: "https://github.com/paladugu-anand/advdev_homework_template.git"
-      contextDir: "openshift-tasks"
+        uri: ${REPO}
     strategy:
       type: "JenkinsPipeline"
       jenkinsPipelineStrategy:
-        jenkinsfilePath: Jenkinsfile" | oc create -f - -n ${GUID}-jenkins
+        jenkinsfilePath: openshift-tasks/Jenkinsfile" | oc create -f - -n ${GUID}-jenkins
 
 
 #kind: List
