@@ -66,7 +66,7 @@ podTemplate(
             echo "Running Code Analysis"
 
             // TBD: Execute Sonarqube Tests
-          sh "${mvnCmd} admin:redhat -Dsonar.host.url=http://sonarqube-gpte-hw-cicd.apps.na311.openshift.opentlc.com/ -Dsonar.projectName=${JOB_BASE_NAME} -Dsonar.projectVersion=${devTag}" 
+          sh "${mvnCmd} sonar:sonar  -Dsonar.host.url=http://sonarqube-gpte-hw-cicd.apps.na311.openshift.opentlc.com/ -Dsonar.projectName=${JOB_BASE_NAME} -Dsonar.projectVersion=${devTag}" 
           }
 
       // Publish the built war file to Nexus
