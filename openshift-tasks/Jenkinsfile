@@ -144,7 +144,7 @@ podTemplate(
 
       script {
       // OpenShift 4
-      sh "skopeo copy --src-tls-verify=false --dest-tls-verify=false --src-creds openshift:\$(oc whoami -t) --dest-creds admin:redhat docker:nexus-registry.gpte-hw-cicd.svc.cluster.local:5000/${devProject}/tasks:${devTag}"
+      sh "skopeo copy --src-tls-verify=false --dest-tls-verify=false --src-creds openshift:\$(oc whoami -t) --dest-creds admin:redhat http://nexus-registry.gpte-hw-cicd.svc.cluster.local:5000/${devProject}/tasks:${devTag}"
 
         // TBD: Tag the built image with the production tag.
 
