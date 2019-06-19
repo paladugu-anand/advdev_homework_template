@@ -44,7 +44,9 @@ items:
     strategy:
       type: "JenkinsPipeline"
       jenkinsPipelineStrategy:
-        jenkinsfilePath: openshift-tasks/Jenkinsfile" | oc create -f - -n ${GUID}-jenkins
+        jenkinsfilePath: openshift-tasks/Jenkinsfile 
+kind: List
+metadata: []" | oc create -f - -n ${GUID}-jenkins
 
 
 # Make sure that Jenkins is fully up and running before proceeding!
