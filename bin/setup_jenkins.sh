@@ -40,17 +40,11 @@ items:
     source:
       type: "Git"
       git:
-        uri: ${REPO}
+        uri: "${REPO}"
     strategy:
       type: "JenkinsPipeline"
       jenkinsPipelineStrategy:
         jenkinsfilePath: openshift-tasks/Jenkinsfile" | oc create -f - -n ${GUID}-jenkins
-
-
-#kind: List
-#metadata: []" | oc create -f - -n ${GUID}-jenkins
-
-
 
 
 # Make sure that Jenkins is fully up and running before proceeding!
