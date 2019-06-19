@@ -45,11 +45,11 @@ items:
     strategy:
       type: "JenkinsPipeline"
       jenkinsPipelineStrategy:
-        jenkinsfilePath: Jenkinsfile
-kind: List
-metadata: []" | oc create -f - -n ${GUID}-jenkins
+        jenkinsfilePath: Jenkinsfile" | oc create -f - -n ${GUID}-jenkins
 
 
+#kind: List
+#metadata: []" | oc create -f - -n ${GUID}-jenkins
 
 
 
